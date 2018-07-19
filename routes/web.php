@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//商品分类
+Route::resource('goodscategory','GoodscategoryController');
+//商品分类
+Route::resource('shopscategory','ShopscategoryController');
+//Route::get('user','UserController@index');
+//商家表
+Route::resource('shops','ShopsController');
+//用户信息表
+Route::resource('users','UsersController');
