@@ -1,4 +1,4 @@
-@extends('default_shopcates')
+@extends('default_admin')
 @section('contents')
     <table class="table table-bordered table-responsive">
         <tr>
@@ -39,6 +39,7 @@
                 <td>{{$shop->discount}}</td>
                 <td>@if($shop->status==1)正常@elseif($shop->status==0)待审核@else禁用@endif</td>
                 <td>
+                    <a href="{{ route('shops.info',[$shop])}}"><button class="btn btn-warning btn-xs">审核是否通过</button></a><br>
                     <a href="{{ route('shops.edit',[$shop])}}"><button class="btn btn-warning btn-xs">编辑</button></a><br>
                     <form method="post" action="{{ route('shops.destroy',[$shop])}}">
                         {{ method_field('DELETE') }}

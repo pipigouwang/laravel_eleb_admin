@@ -1,4 +1,4 @@
-@extends('default_shopcates')
+@extends('default_admin')
 @section('contents')
 <h1>添加商信息</h1>
 @include('_errors')

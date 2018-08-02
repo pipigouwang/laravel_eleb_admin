@@ -1,6 +1,6 @@
 @extends('default_shopcates')
 @section('contents')
-<h1>注册商信息</h1>
+<h1>注册商家信息</h1>
 @include('_errors')
 <form method="post" action="{{route('shops.store')}}" enctype="multipart/form-data">
    <div class="container">
@@ -12,7 +12,6 @@
                @endforeach
            </select>
        </div>
-       <ul> 店铺分类ID: <input type="text" name="shop_category_id"></ul>
        <ul>名称: <input type="text" name="shop_name"></ul>
        <ul>
                <label>店铺图片</label>
@@ -35,9 +34,9 @@
        <ul>配送费 <input type="text" name="send_cost"></ul>
        <ul>店公告 <input type="text" name="notice"></ul>
        <ul>优惠信息 <input type="text" name="discount"></ul>
-       <ul>状态<input type="radio" name="status" value="1">正常
-           <input type="radio" name="status" value="0">审核
-           <input type="radio" name="status" value="-1">禁用</ul>
+       {{--<ul>状态<input type="radio" name="status" value="1">正常--}}
+           {{--<input type="radio" name="status" value="0">审核--}}
+           {{--<input type="radio" name="status" value="-1">禁用</ul>--}}
        <h1>注册用户</h1>
        <div class=" container" >
            用户名: <input type="text" name="name" value="{{old('name')}}"><br>

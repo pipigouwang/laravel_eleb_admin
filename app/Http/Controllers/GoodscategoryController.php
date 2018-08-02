@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 class GoodscategoryController extends Controller
 {
     //
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //echo'商品分类';

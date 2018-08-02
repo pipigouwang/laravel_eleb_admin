@@ -1,4 +1,4 @@
-@extends('default_shopcates')
+@extends('default_admin')
 @section('contents')
     <table class="table table-bordered table-responsive">
         <tr>

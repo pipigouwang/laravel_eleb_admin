@@ -1,4 +1,4 @@
-@extends('default_shopcates')
+@extends('default_admin')
 @section('contents')
     <form method="post" action="{{route('shops.update',[$shop])}}" enctype="multipart/form-data">
         <div style="text-align: center"><h4>修改商家信息</h4></div>
@@ -85,7 +85,7 @@
                 <input type="radio" name="status" value="1" {{$shop->status==1?'checked':''}}>正常
                 <input type="radio" name="status" value="0"
                         {{$shop->status==0?'checked':''}}>待审核
-                <input type="radio" name="status" value="0"
+                <input type="radio" name="status" value="-1"
                         {{$shop->status==-1?'checked':''}}>禁用
             </div>
         </div>

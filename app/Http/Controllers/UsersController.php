@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(Request $request)
     {
         $keyword=$request->keyword;
@@ -54,11 +58,6 @@ class UsersController extends Controller
             'status'=>$request->status,
             'head'=>$fileName
         ]);
-        //设置提示信息
-        //第一种跳转
-//        session()->flash('success','添加成功');
-//        return redirect()->route('users.index');
-        //第二种
         return redirect('/users')->with('success','添加成功');
     }
     public function edit(Users $user)
