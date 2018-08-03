@@ -75,4 +75,11 @@ Route::get('/members.able/{member}','MembersController@able')->name('members.abl
 //权限管理
 Route::resource('permissions','PermissionsController');
 Route::resource('roles','RolesController');
+//菜单
 Route::resource('/navs','NavController');
+//抽奖活动表
+Route::resource('events','EventController');
+//抽奖活动列表
+Route::resource('eventprizes','EventprizesController');
+//活动报名列表
+Route::resource('eventusers','EventusersController');
